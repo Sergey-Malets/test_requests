@@ -1,4 +1,18 @@
 import requests
+
+website_2 = "https://jsonplaceholder.typicode.com/comments/108"
+print(requests.get(website_2).json())
+response_2 = requests.put(website_2,
+                        data={
+                            "id":108,
+                            'postId':2,
+                            "name":'malets',
+                            "email":"mail@mail.by",
+                            "body":"my body",
+                        }
+                        )
+print(response_2.json())
+
 # headers = {
 #     "User-Agent": "malets"
 # }
